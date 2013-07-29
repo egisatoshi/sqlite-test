@@ -1,0 +1,97 @@
+addr  opcode         p1    p2    p3    p4             p5  comment      
+----  -------------  ----  ----  ----  -------------  --  -------------
+0     Trace          0     0     0                    00               
+1     Integer        20    1     0                    00               
+2     Goto           0     11    0                    00               
+3     OpenRead       0     2     0     2              00               
+4     MustBeInt      1     9     0                    00               
+5     NotExists      0     9     1                    00               
+6     Rowid          0     3     0                    00               
+7     Column         0     1     4                    00               
+8     ResultRow      3     2     0                    00               
+9     Close          0     0     0                    00               
+10    Halt           0     0     0                    00               
+11    Transaction    0     0     0                    00               
+12    VerifyCookie   0     5     0                    00               
+13    TableLock      0     2     0     twitter_user   00               
+14    Goto           0     3     0                    00               
+addr  opcode         p1    p2    p3    p4             p5  comment      
+----  -------------  ----  ----  ----  -------------  --  -------------
+0     Trace          0     0     0                    00               
+1     Integer        20    1     0                    00               
+2     Goto           0     12    0                    00               
+3     OpenRead       0     3     0     3              00               
+4     MustBeInt      1     10    0                    00               
+5     NotExists      0     10    1                    00               
+6     Rowid          0     3     0                    00               
+7     Column         0     1     4                    00               
+8     Column         0     2     5                    00               
+9     ResultRow      3     3     0                    00               
+10    Close          0     0     0                    00               
+11    Halt           0     0     0                    00               
+12    Transaction    0     0     0                    00               
+13    VerifyCookie   0     5     0                    00               
+14    TableLock      0     3     0     follow         00               
+15    Goto           0     3     0                    00               
+addr  opcode         p1    p2    p3    p4             p5  comment      
+----  -------------  ----  ----  ----  -------------  --  -------------
+0     Trace          0     0     0                    00               
+1     Integer        20    1     0                    00               
+2     Goto           0     17    0                    00               
+3     OpenRead       0     3     0     3              00               
+4     OpenRead       1     5     0     keyinfo(1,BINARY)  00               
+5     SeekGe         1     14    1     1              00               
+6     IdxGE          1     14    1     1              01               
+7     IdxRowid       1     2     0                    00               
+8     Seek           0     2     0                    00               
+9     IdxRowid       1     3     0                    00               
+10    Column         1     0     4                    00               
+11    Column         0     2     5                    00               
+12    ResultRow      3     3     0                    00               
+13    Next           1     6     0                    00               
+14    Close          0     0     0                    00               
+15    Close          1     0     0                    00               
+16    Halt           0     0     0                    00               
+17    Transaction    0     0     0                    00               
+18    VerifyCookie   0     5     0                    00               
+19    TableLock      0     3     0     follow         00               
+20    Goto           0     3     0                    00               
+addr  opcode         p1    p2    p3    p4             p5  comment      
+----  -------------  ----  ----  ----  -------------  --  -------------
+0     Trace          0     0     0                    00               
+1     Integer        20    1     0                    00               
+2     Goto           0     32    0                    00               
+3     OpenRead       0     2     0     2              00               
+4     OpenRead       1     3     0     3              00               
+5     OpenRead       3     5     0     keyinfo(1,BINARY)  00               
+6     OpenRead       2     2     0     2              00               
+7     MustBeInt      1     27    0                    00               
+8     NotExists      0     27    1                    00               
+9     SeekGe         3     27    1     1              00               
+10    IdxGE          3     27    1     1              01               
+11    IdxRowid       3     3     0                    00               
+12    Seek           1     3     0                    00               
+13    Column         3     0     2                    00               
+14    Ne             2     26    1     collseq(BINARY)  6b               
+15    Column         1     2     4                    00               
+16    MustBeInt      4     26    0                    00               
+17    NotExists      2     26    4                    00               
+18    Rowid          0     5     0                    00               
+19    Column         0     1     6                    00               
+20    IdxRowid       3     7     0                    00               
+21    Column         3     0     8                    00               
+22    Column         1     2     9                    00               
+23    Rowid          2     10    0                    00               
+24    Column         2     1     11                   00               
+25    ResultRow      5     7     0                    00               
+26    Next           3     10    0                    00               
+27    Close          0     0     0                    00               
+28    Close          1     0     0                    00               
+29    Close          3     0     0                    00               
+30    Close          2     0     0                    00               
+31    Halt           0     0     0                    00               
+32    Transaction    0     0     0                    00               
+33    VerifyCookie   0     5     0                    00               
+34    TableLock      0     2     0     twitter_user   00               
+35    TableLock      0     3     0     follow         00               
+36    Goto           0     3     0                    00               
