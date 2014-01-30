@@ -1,6 +1,6 @@
-def twitter_user(n)
+def node(n)
   (1..n).each do |i|
-    print "insert into twitter_user values("
+    print "insert into node values("
     print i
     print ", "
     print "\"\""
@@ -9,9 +9,9 @@ def twitter_user(n)
   end
 end
 
-def follow(n)
+def edge(n)
   (1..(100 * n)).each do |i|
-    print "insert into follow values("
+    print "insert into edge values("
     print i
     print ", "
     print (1 + rand(n))
@@ -22,6 +22,6 @@ def follow(n)
   end
 end
 
-twitter_user(1000)
-follow(1000)
+node(1000)
+edge(1000)
 
